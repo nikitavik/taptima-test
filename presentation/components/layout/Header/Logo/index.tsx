@@ -1,10 +1,23 @@
 import React, {FC} from 'react';
+
+import logo from "/public/logo.svg"
+
 import {LogoText, LogoImage, StyledLogo } from './styled';
+import {ReactSVG} from "react-svg";
 
 const Logo: FC = () => {
+    console.log(logo)
     return(
         <StyledLogo>
-            <LogoImage/>
+            <LogoImage>
+                <ReactSVG
+                    src={logo.src}
+                    beforeInjection={(svg) => {
+                        svg.setAttribute('style', 'width: 36px')
+                        svg.setAttribute('style', 'height: 36px')
+                    }}
+                />
+            </LogoImage>
             <LogoText>Devias Kit</LogoText>
         </StyledLogo>
     )

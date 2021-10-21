@@ -1,14 +1,14 @@
 import styled from "styled-components";
 
 export const StyledLogo = styled.div`
-  margin-left: 24px;
   display: flex;
   align-items: center;
+  margin-left: 24px;
 `
 export const LogoImage = styled.div`
-  height: 36px;
-  min-width: 36px;
-  background-image: url("${props => props.theme.svgs.logoURL}");
+  height: 36px; 
+  width: 36px;
+  color: #fff;
 `
 export const LogoText = styled.div`
   margin-left: 8px;
@@ -17,4 +17,5 @@ export const LogoText = styled.div`
   font-size: 20px;
   line-height: 120%;
   letter-spacing: -0.0555556px;
+  white-space: nowrap;
 `
