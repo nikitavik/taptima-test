@@ -11,5 +11,8 @@ export const StyledHeader = styled.header`
 `
 
 export const HeaderButtonsWrapper = styled.div`
+  display: flex;
+  align-items: center;
   margin-left: auto;
+  margin-right: 30px;
 `

@@ -4,11 +4,12 @@ export const StyledLogo = styled.div`
   display: flex;
   align-items: center;
   margin-left: 24px;
+  cursor: pointer;
 `
 export const LogoImage = styled.div`
   height: 36px; 
   width: 36px;
-  color: #fff;
+  fill: #fff;
 `
 export const LogoText = styled.div`
   margin-left: 8px;

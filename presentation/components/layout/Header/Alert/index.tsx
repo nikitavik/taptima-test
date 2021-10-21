@@ -6,7 +6,7 @@ const Alert: FC = () => {
         <HeaderAlert>
             <AlertTag>free</AlertTag>
             <AlertText>
-                See our PRO version for more design components & coded in React follow this link:
+                See our PRO version for more design components & coded in React follow this link:&nbsp;
                 <a
                     href="https://devias.io/products/devias-kit-pro"
                     target="_blank"
