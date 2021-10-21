@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const AlertTag = styled.div`
   color: #fff;
   font-weight: 500;
-  font-size: 10px;
+  font-size: 0.625rem;
   line-height: 120%;
   letter-spacing: 0.3px;
   background-color: ${props => props.theme.colors.accentGreen};
@@ -22,7 +22,7 @@ export const HeaderAlert = styled.div`
 export const AlertText = styled.div`
   margin-left: 14px;
   color: ${props => props.theme.colors.lightBlue};
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 400;
   line-height: 114%;
   & a {

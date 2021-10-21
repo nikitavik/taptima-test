@@ -15,7 +15,7 @@ export const LogoText = styled.div`
   margin-left: 8px;
   color: #fff;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 120%;
   letter-spacing: -0.0555556px;
   white-space: nowrap;
