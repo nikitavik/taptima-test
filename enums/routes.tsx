@@ -5,7 +5,7 @@ export enum SidebarRoutes {
     authentication = "/authentication",
     typography = "/typography",
     icons = "/icons",
-    support = "/settings/profile",
+    support = "/support",
 }
 export enum NavBarTabs {
     profile = "/settings/profile",

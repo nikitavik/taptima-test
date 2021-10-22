@@ -7,6 +7,7 @@ export const StyledUserProfile = styled.div`
   flex-direction: column;
   align-items: center;  
   border-bottom: ${props => props.theme.borders.gray1pxBorder};
+  cursor: pointer;
 `
 export const AvatarWrapper = styled.div`
   width: 100px;

@@ -7,7 +7,7 @@ export const StyledHeader = styled.header`
   align-items: center;
   width: 100%;
   background-color: ${props => props.theme.colors.darkenBlue};
-  height: ${props => props.theme.sizes.headerHeight};
+  max-height: ${props => props.theme.sizes.headerHeight};
   grid-area: header;
 `
 
