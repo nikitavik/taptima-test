@@ -1,16 +1,8 @@
 import React, { FC } from 'react';
 import IconNavLink from "../IconNavLink";
-import styled from "styled-components";
 import {NavLink} from "../index";
+import {IconNavListWrapper, StyledNavList } from './styled';
 
-
-const IconNavListWrapper = styled.nav``
-const StyledNavList = styled.ul`
-  margin: 0.5rem 1.5rem 0;
-  padding: 0 0 1.5rem;
-  border-bottom: ${props => props.theme.borders.gray1pxBorder};
-  list-style-type: none;
-`
 
 type PropsT = {
     links: NavLink[]

@@ -1,8 +1,11 @@
-import {FC} from "react";
+import React, {FC} from "react";
+import MainLayout from "../presentation/components/layout/MainLayout";
 
 const Main: FC = () => {
   return (
-      <div>Main Content</div>
+      <MainLayout>
+          Main Layout
+      </MainLayout>
   )
 }
 

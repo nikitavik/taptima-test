@@ -1,7 +1,5 @@
 import type { AppProps } from 'next/app'
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
-import MainLayout from "../presentation/components/layout/MainLayout"
-
 
 const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
@@ -40,7 +38,8 @@ const theme = {
     },
     sizes: {
         headerHeight: "64px",
-        sidebarWidth: "270px"
+        navBarHeight: "57px",
+        sidebarWidth: "270px",
     },
     shadows: {
         mainShadow: "0px 1px 0px rgba(63, 63, 68, 0.05), 0px 1px 3px rgba(63, 63, 68, 0.15);",
@@ -58,9 +57,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
         <GlobalStyle />
         <ThemeProvider theme={theme}>
-            <MainLayout>
-                <Component {...pageProps} />
-            </MainLayout>
+            <Component {...pageProps} />
         </ThemeProvider>
     </>
   )

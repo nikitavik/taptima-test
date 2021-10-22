@@ -2,14 +2,14 @@ import React, {FC} from 'react';
 import {ReactSVG} from "react-svg";
 import { StyledIconButton } from './styled';
 
-export type IconButtonPropsT = {
+type PropsT = {
     src: string
     color: string
     size: number | string
     onClick?: () => void
 }
 
-const IconButton: FC<IconButtonPropsT> = (props) => {
+const IconButton: FC<PropsT> = (props) => {
     const {src, onClick, color, size} = props
     return(
         <StyledIconButton onClick={onClick} size={`${size}px`} color={color}>

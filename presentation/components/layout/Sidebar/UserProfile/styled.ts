@@ -8,16 +8,23 @@ export const StyledUserProfile = styled.div`
   align-items: center;  
   border-bottom: ${props => props.theme.borders.gray1pxBorder};
 `
-export const AvatarWrapper = styled.div``
-export const AvatarImage = styled.img`
+export const AvatarWrapper = styled.div`
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
+  overflow: hidden;
+`
+export const AvatarImage = styled.img`
+  width: 100%; 
+  height: 100%; 
+  background-color: ${props => props.theme.colors.gray33}
 `
 export const UserName = styled.div`
   margin-top: 1rem;
   font-size: 1rem;
   line-height: 125%;
   letter-spacing: -0.05px;
-
+  
 `
 export const UserRole = styled.div`
   margin-top: 0.25rem;
