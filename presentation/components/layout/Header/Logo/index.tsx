@@ -1,12 +1,11 @@
 import React, {FC} from 'react';
 
-import logo from "/public/logo.svg"
+import logo from "/public/logos/logo.svg"
 
 import {LogoText, LogoImage, StyledLogo } from './styled';
 import {ReactSVG} from "react-svg";
 
 const Logo: FC = () => {
-    console.log(logo)
     return(
         <StyledLogo>
             <LogoImage>

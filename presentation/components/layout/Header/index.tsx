@@ -5,8 +5,8 @@ import Alert from "./Alert";
 
 import {HeaderButtonsWrapper, StyledHeader } from "./styled";
 
-import bell from "/public/bell.svg"
-import exit from "/public/exit.svg"
+import bell from "/public/icons/bell.svg"
+import exit from "/public/icons/exit.svg"
 
 import IconButton from "../../common/IconButton";
 

@@ -3,8 +3,12 @@ import {IconButtonPropsT} from "./index";
 
 export const StyledIconButton = styled.div<Partial<IconButtonPropsT>>`
     margin-left: 16px;
-    width: ${props => props.size};
-    height: ${props => props.size};
+    max-width: ${props => props.size};
+    max-height: ${props => props.size};
     fill: ${props => props.color};
     cursor: pointer;
+    & *{
+      max-width: ${props => props.size};
+      max-height: ${props => props.size};
+    }
 `
