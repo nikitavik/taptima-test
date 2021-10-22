@@ -19,6 +19,8 @@ const GlobalStyle = createGlobalStyle`
   
   * {
     box-sizing: border-box;
+    font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   }
 `
 
@@ -26,6 +28,7 @@ const theme = {
     colors: {
         primaryBlue: "#1665D8",
         darkenBlue: "#3F51B5",
+        secondaryBlue: "#425A70",
         lightBlue: "#CDD1EA",
         lightGray23: "rgba(3, 3, 3, 0.23)",
         accentGreen: "#26A69A",
