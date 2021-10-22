@@ -1,18 +1,16 @@
 import styled from "styled-components";
 
-export const StyledIconNavLink = styled.li`
+export const StyledIconNavLink = styled.li<{isActive: boolean}>`
   list-style-type: none;
   margin-top: 0.3rem;
   width: 100%;
   padding: 0.8rem 0;
   border-radius: 4px;
   transition: all 250ms ease;
-  &:hover {
-    background-color: ${props => props.theme.colors.transparentBlue};
-    border-left: 2px solid ${props => props.theme.colors.primaryBlue};
-  }
+  border-bottom-color: ${props => props.isActive ? props.theme.colors.transparentBlue : ""};
   cursor: pointer;
-  &.active {
+  border-left: ${props => props.isActive ? `2px solid ${props.theme.colors.primaryBlue}`:""};
+  &:hover {
     background-color: ${props => props.theme.colors.transparentBlue};
     border-left: 2px solid ${props => props.theme.colors.primaryBlue};
   }

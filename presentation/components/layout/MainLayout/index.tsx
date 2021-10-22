@@ -6,15 +6,13 @@ import {MainContainer, MainContent } from "./styled";
 const MainLayout: FC = (props) => {
     const {children} = props;
     return(
-        <>
+        <MainContainer>
             <Header/>
-            <MainContainer>
-                <Sidebar/>
-                <MainContent>
-                        {children}
-                </MainContent>
-            </MainContainer>
-        </>
+            <Sidebar/>
+            <MainContent>
+                    {children}
+            </MainContent>
+        </MainContainer>
     )
 }
 export default MainLayout

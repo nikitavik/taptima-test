@@ -8,6 +8,7 @@ export const StyledHeader = styled.header`
   width: 100%;
   background-color: ${props => props.theme.colors.darkenBlue};
   height: ${props => props.theme.sizes.headerHeight};
+  grid-area: header;
 `
 
 export const HeaderButtonsWrapper = styled.div`

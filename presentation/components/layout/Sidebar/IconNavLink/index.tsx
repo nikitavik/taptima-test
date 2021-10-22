@@ -2,6 +2,7 @@ import React, {FC} from 'react';
 import Link from "next/link"
 import IconButton from "../../../common/IconButton";
 import {LinkText, StyledIconNavLink, StyledLink } from './styled';
+import {useRouter} from "next/router";
 
 type PropsT = {
     to: string
@@ -11,15 +12,16 @@ type PropsT = {
 
 const IconNavLink: FC<PropsT> = (props) => {
     const {to, text, icon} = props
+    const {route} = useRouter()
     return (
-        <StyledIconNavLink>
-            <Link href={to} passHref>
+        <Link href={to} passHref>
+            <StyledIconNavLink isActive={route === to}>
                 <StyledLink>
                     <IconButton src={icon} color={"#66788A"} size={24} />
                     <LinkText>{ text }</LinkText>
                 </StyledLink>
-            </Link>
-        </StyledIconNavLink>
+            </StyledIconNavLink>
+        </Link>
     );
 };
 

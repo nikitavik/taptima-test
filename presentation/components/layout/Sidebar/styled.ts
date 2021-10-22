@@ -11,8 +11,8 @@ export const StyledSidebar = styled.aside`
   box-shadow: ${props => props.theme.shadows.mainShadow};
   top: ${props => props.theme.sizes.headerHeight};
   max-width: ${props => props.theme.sizes.sidebarWidth};
-  min-width: ${props => props.theme.sizes.sidebarWidth};
   overflow-y: auto;
+  grid-area: sidebar;
 `
 export const SidebarSubtitle = styled.div`
   color: ${props => props.theme.colors.gray33};
