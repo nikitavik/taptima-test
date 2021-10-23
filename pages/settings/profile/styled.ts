@@ -3,18 +3,20 @@ import {mq} from "../../../constant/mediaqueries";
 
 export const PageLayout = styled.div`
   display: grid;
-  grid-template-columns: 0 minmax(300px, 375px) minmax(300px, 375px);
-  grid-gap: 1.5rem;
-  grid-template-areas: 
-    "navbar navbar navbar"
-    ". profile basicProfile"
-    ". profile notifications"
-  ;
+  grid-template-columns: minmax(300px, 375px) minmax(300px, 910px);
+  grid-template-rows: repeat(auto-fit, 1fr);
+  padding: 1.5rem;
+  gap: 1.5rem;
+  grid-template-areas:
+    "profile basicProfile "
+    ". basicProfile"
+    ". notifications"
+    ". notifications"
+;
   ${mq.sm} {
-    padding: 0 1.5rem;
     grid-template-columns: auto;
+    column-gap: 0;
     grid-template-areas: 
-    "navbar"
     "profile"
     "basicProfile"
     "notifications"
