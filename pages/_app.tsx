@@ -1,5 +1,6 @@
 import type { AppProps } from 'next/app'
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
+import {mq} from "../constant/mediaqueries";
 
 const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
@@ -11,6 +12,9 @@ const GlobalStyle = createGlobalStyle`
     color: #3A3B3F;
     font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    ${mq.sm} {
+      font-size: 14px;
+    }
   }
   a {
     color: inherit;
@@ -34,6 +38,7 @@ const theme = {
         accentGreen: "#26A69A",
         backgroundGray: "#F9FAFB",
         blackFont: "#3A3B3F",
+        deepBlackFont: "#212529",
         subFont: "#9EA0A5",
         lightFont: "#66788A",
         transparentBlue: "#F6F9FD",
