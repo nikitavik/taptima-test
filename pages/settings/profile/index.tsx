@@ -10,8 +10,8 @@ import { PageLayout } from "./styled";
 const Profile: FC = () => {
     return (
         <MainLayout>
+            <NavBar />
             <PageLayout>
-                <NavBar />
                 <ProfileCard />
                 <BasicProfileCard />
                 <Card area={"notifications"}>
