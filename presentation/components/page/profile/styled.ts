@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { mq } from '../../../constant/mediaqueries';
+import { mq } from '../../../../constant/mediaqueries';
 
 export const PageLayout = styled.div`
   display: grid;
