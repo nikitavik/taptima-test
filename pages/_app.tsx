@@ -43,6 +43,7 @@ const theme = {
         lightFont: "#66788A",
         transparentBlue: "#F6F9FD",
         gray33: "rgba(0, 0, 0, 0.33)",
+        white: "#fafafa"
     },
     sizes: {
         headerHeight: "64px",
@@ -51,11 +52,13 @@ const theme = {
     },
     shadows: {
         mainShadow: "0px 1px 0px rgba(63, 63, 68, 0.05), 0px 1px 3px rgba(63, 63, 68, 0.15);",
-        lightShadow: "0px 1px 3px rgba(63, 63, 68, 0.15);"
+        lightShadow: "0px 1px 3px rgba(63, 63, 68, 0.15);",
+        buttonShadow: "0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);",
     },
     borders: {
         light1pxBorder: "1px solid rgba(63, 63, 68, 0.005);",
-        gray1pxBorder: "1px solid #E4E7EB;"
+        gray1pxBorder: "1px solid #E4E7EB;",
+        lightBlue1pxBorder: "1px solid rgba(22, 101, 216, 0.1);",
     }
 }
 
