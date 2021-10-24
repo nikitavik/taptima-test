@@ -1,6 +1,5 @@
 import React, { FC, useState } from 'react';
 import Card from '../../../common/block/Card';
-import { ProfileCards } from '../../../../../enums/profileCards';
 import PrimaryButton from '../../../common/control/PrimaryButton';
 import { ButtonColors } from '../../../../../enums/styledComponents';
 import {
@@ -13,6 +12,7 @@ import { useForm } from 'react-hook-form';
 import TextInput from '../../../common/control/TextInput';
 import styled from 'styled-components';
 import { FORM_INPUTS } from './formInputs';
+import { CardAreas } from '../../../../../enums/cardAreas';
 
 export type BasicFormInputs = {
   firstName: string;
@@ -79,7 +79,7 @@ const BasicProfileCard: FC = () => {
   };
   return (
     <Card
-      area={ProfileCards.basicProfile}
+      area={CardAreas.basicProfile}
       header={
         <BasicCardHeader>
           <BasicHeaderTitle>Basic Profile</BasicHeaderTitle>

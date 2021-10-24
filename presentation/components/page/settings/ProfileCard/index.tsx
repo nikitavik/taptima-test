@@ -3,7 +3,6 @@ import profile from '/public/images/profile.png';
 import { ButtonColors } from '../../../../../enums/styledComponents';
 import Card from '../../../common/block/Card';
 import TextButton from '../../../common/control/TextButton';
-import { ProfileCards } from '../../../../../enums/profileCards';
 import {
   ProfileCardFooter,
   ProfileCardSubtitle,
@@ -13,11 +12,12 @@ import {
   ProfileTextWrapper,
   StyledProfileCard,
 } from './styled';
+import { CardAreas } from '../../../../../enums/cardAreas';
 
 const ProfileCard: FC = () => {
   return (
     <Card
-      area={ProfileCards.profile}
+      area={CardAreas.profile}
       footer={
         <ProfileCardFooter>
           <TextButton color={ButtonColors.primary}>Upload picture</TextButton>
