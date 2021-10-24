@@ -10,11 +10,8 @@ export const GlobalStyles = createGlobalStyle`
     font-size: 14px;
     color: #3A3B3F;
     overflow: hidden;
-    ${mq.xl} {
-      font-size: 18px;
-    }
     ${mq.sm} {
-      font-size: 14px;
+      font-size: 12px;
     }
   }
   a {

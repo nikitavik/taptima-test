@@ -25,10 +25,11 @@ export const ButtonsWrapper = styled.div`
 export const BurgerWrapper = styled.div`
   display: none;
   ${mq.xs} {
-    display: block;
+    display: flex;
+    align-items: center;
     padding: 0.8rem 0.5rem 0.8rem 0.8rem;
-    height: 36px;
-    width: 36px;
+    height: 25px;
+    width: 25px;
     fill: #fff;
     stroke: #fff;
     cursor: pointer;
