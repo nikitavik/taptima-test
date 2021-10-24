@@ -20,8 +20,12 @@ const ProfileCard: FC = () => {
       area={CardAreas.profile}
       footer={
         <Footer>
-          <TextButton color={ButtonColors.primary}>Upload picture</TextButton>
-          <TextButton color={ButtonColors.secondary}>Remove picture</TextButton>
+          <TextButton type="button" color={ButtonColors.primary}>
+            Upload picture
+          </TextButton>
+          <TextButton type="button" color={ButtonColors.secondary}>
+            Remove picture
+          </TextButton>
         </Footer>
       }
     >
