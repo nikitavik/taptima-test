@@ -10,7 +10,7 @@ type PropsT = NavBarLink & {
 const NavTab: FC<PropsT> = (props) => {
   const { to, text, isActive } = props;
   return (
-    <Link href={to} passHref>
+    <Link href={to}>
       <StyledNavTab isActive={isActive}>
         <TabText>{text}</TabText>
       </StyledNavTab>
