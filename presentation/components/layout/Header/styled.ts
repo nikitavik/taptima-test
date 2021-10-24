@@ -8,14 +8,14 @@ export const StyledHeader = styled.header`
   display: flex;
   align-items: center;
   width: 100%;
-  background-color: ${(props) => props.theme.colors.darkenBlue};
-  max-height: ${(props) => props.theme.sizes.headerHeight};
+  background-color: ${({ theme }) => theme.colors.darkenBlue};
+  max-height: ${({ theme }) => theme.sizes.headerHeight};
   grid-area: header;
 `;
 
-export const HeaderButtonsWrapper = styled.div`
+export const ButtonsWrapper = styled.div`
   display: flex;
   align-items: center;
   margin-left: auto;
-  margin-right: 30px;
+  margin-right: 1.875rem;
 `;
