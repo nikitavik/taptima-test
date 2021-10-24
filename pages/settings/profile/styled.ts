@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import {mq} from "../../../constant/mediaqueries";
+import styled from 'styled-components';
+import { mq } from '../../../constant/mediaqueries';
 
 export const PageLayout = styled.div`
   display: grid;
@@ -8,18 +8,16 @@ export const PageLayout = styled.div`
   padding: 1.5rem;
   gap: 1.5rem;
   grid-template-areas:
-    "profile basicProfile "
-    ". basicProfile"
-    ". notifications"
-    ". notifications"
-;
+    'profile basicProfile '
+    '. basicProfile'
+    '. notifications'
+    '. notifications';
   ${mq.sm} {
     grid-template-columns: auto;
     column-gap: 0;
-    grid-template-areas: 
-    "profile"
-    "basicProfile"
-    "notifications"
-  ;
+    grid-template-areas:
+      'profile'
+      'basicProfile'
+      'notifications';
   }
-`
+`;

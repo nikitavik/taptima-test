@@ -1,15 +1,19 @@
-import styled from "styled-components";
-import {attributePicker} from "../../../../helpers/styledComponents";
+import styled from 'styled-components';
+import { attributePicker } from '../../../../helpers/styledComponents';
 
-export const StyledPrimaryButton = styled.button<{color: string;}>`
+export const StyledPrimaryButton = styled.button<{ color: string }>`
   padding: 0.75rem 1rem;
-  ${({ color,theme }) => color === 'primary' && attributePicker("color", theme.colors.white)}
-  ${({ color,theme }) => color === 'primary' && attributePicker("background-color", theme.colors.primaryBlue)}
-  ${({ color,theme }) => color === 'primary' && attributePicker("box-shadow", theme.shadows.buttonShadow)}
-  ${({ color }) => color === 'primary' && attributePicker("border", "transparent")}
-  ${({ color,theme }) => color === 'secondary' && attributePicker("color", theme.colors.primaryBlue)} 
-  ${({ color }) => color === 'secondary' && attributePicker("background-color", "transparent")}
-  ${({ color,theme }) => color === 'secondary' && attributePicker("border", theme.borders.lightBlue1pxBorder)}
+  ${({ color, theme }) => color === 'primary' && attributePicker('color', theme.colors.white)}
+  ${({ color, theme }) =>
+    color === 'primary' && attributePicker('background-color', theme.colors.primaryBlue)}
+  ${({ color, theme }) =>
+    color === 'primary' && attributePicker('box-shadow', theme.shadows.buttonShadow)}
+  ${({ color }) => color === 'primary' && attributePicker('border', 'transparent')}
+  ${({ color, theme }) =>
+    color === 'secondary' && attributePicker('color', theme.colors.primaryBlue)} 
+  ${({ color }) => color === 'secondary' && attributePicker('background-color', 'transparent')}
+  ${({ color, theme }) =>
+    color === 'secondary' && attributePicker('border', theme.borders.lightBlue1pxBorder)}
   border-radius: 4px;
   font-weight: 500;
   font-size: 0.875rem;
@@ -18,20 +22,24 @@ export const StyledPrimaryButton = styled.button<{color: string;}>`
   letter-spacing: 1.25px;
   text-transform: uppercase;
   cursor: pointer;
-  transition: all 0.25s ease; 
-  &:hover{
-    ${({ color,theme }) => color === 'primary' && attributePicker("background-color", theme.colors.darkenBlue)}
-    ${({ color,theme }) => color === 'secondary' && attributePicker("background-color", theme.colors.primaryBlue)}
-    ${({ color }) => color === 'secondary' && attributePicker("color", "#fff")}
+  transition: all 0.25s ease;
+  &:hover {
+    ${({ color, theme }) =>
+      color === 'primary' && attributePicker('background-color', theme.colors.darkenBlue)}
+    ${({ color, theme }) =>
+      color === 'secondary' && attributePicker('background-color', theme.colors.primaryBlue)}
+    ${({ color }) => color === 'secondary' && attributePicker('color', '#fff')}
   }
-  &:active{
-    ${({ color,theme }) => color === 'primary' && attributePicker("background-color", theme.colors.primaryBlue)}
-    ${({ color,theme }) => color === 'secondary' && attributePicker("color", theme.colors.primaryBlue)}
-    ${({ color }) => color === 'secondary' && attributePicker("background-color", "transparent")}
+  &:active {
+    ${({ color, theme }) =>
+      color === 'primary' && attributePicker('background-color', theme.colors.primaryBlue)}
+    ${({ color, theme }) =>
+      color === 'secondary' && attributePicker('color', theme.colors.primaryBlue)}
+    ${({ color }) => color === 'secondary' && attributePicker('background-color', 'transparent')}
   }
-  &:disabled{
-    background-color: ${props => props.theme.colors.gray33};
-    color: ${props => props.theme.colors.white};
+  &:disabled {
+    background-color: ${(props) => props.theme.colors.gray33};
+    color: ${(props) => props.theme.colors.white};
     cursor: auto;
   }
-`
+`;

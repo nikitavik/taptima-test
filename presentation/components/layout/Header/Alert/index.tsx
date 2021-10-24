@@ -1,22 +1,22 @@
 import React, { FC } from 'react';
-import {AlertTag, AlertText, HeaderAlert } from './styled';
+import { AlertTag, AlertText, HeaderAlert } from './styled';
 
 const Alert: FC = () => {
-    return(
-        <HeaderAlert>
-            <AlertTag>free</AlertTag>
-            <AlertText>
-                See our PRO version for more design components & coded in React follow this link:&nbsp;
-                <a
-                    href="https://devias.io/products/devias-kit-pro"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    https://devias.io/products/devias-kit-pro
-                </a>
-            </AlertText>
-        </HeaderAlert>
-    )
-}
+  return (
+    <HeaderAlert>
+      <AlertTag>free</AlertTag>
+      <AlertText>
+        See our PRO version for more design components & coded in React follow this link:&nbsp;
+        <a
+          href="https://devias.io/products/devias-kit-pro"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://devias.io/products/devias-kit-pro
+        </a>
+      </AlertText>
+    </HeaderAlert>
+  );
+};
 
-export default Alert
+export default Alert;

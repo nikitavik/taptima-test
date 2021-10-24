@@ -1,5 +1,5 @@
-import {css} from "styled-components";
+import { css } from 'styled-components';
 
-export const attributePicker = (attr: string,color: string) => css`
-    ${attr}: ${color};
+export const attributePicker = (attr: string, color: string) => css`
+  ${attr}: ${color};
 `;

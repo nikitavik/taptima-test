@@ -26,8 +26,8 @@ export const ProfileCardSubtitle = styled.div`
   font-size: 0.875rem;
   line-height: 143%;
   letter-spacing: -0.05px;
-  color: ${props => props.theme.colors.subFont}
-`
+  color: ${(props) => props.theme.colors.subFont};
+`;
 
 export const ProfileImageWrapper = styled.div`
   width: 140px;
@@ -38,7 +38,7 @@ export const ProfileImageWrapper = styled.div`
     width: 100px;
     height: 100px;
   }
-`
+`;
 export const ProfileImage = styled.img`
   width: 100%;
   height: 100%;
