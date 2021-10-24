@@ -1,12 +1,12 @@
 import React, { FC } from 'react';
-import user from '/public/images/user.png';
-import { AvatarImage, AvatarWrapper, StyledUserProfile, UserName, UserRole } from './styled';
 import Link from 'next/link';
-import { NavBarTabs } from '../../../../../enums/routes';
+import user from '/public/images/user.png';
+import { NavBarRoutes } from '../../../../../enums/routes';
+import { AvatarImage, AvatarWrapper, StyledUserProfile, UserName, UserRole } from './styled';
 
 const UserProfile: FC = () => {
   return (
-    <Link href={NavBarTabs.profile}>
+    <Link href={NavBarRoutes.profile}>
       <StyledUserProfile>
         <AvatarWrapper>
           <AvatarImage src={user.src} alt="User avatar" />

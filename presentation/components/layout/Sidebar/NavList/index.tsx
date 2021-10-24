@@ -1,21 +1,22 @@
 import React, { FC } from 'react';
+import { SidebarNavLink } from '../../../../../constant/sideBarRouterLinks';
 import IconNavLink from '../IconNavLink';
-import { NavLink } from '../index';
-import { IconNavListWrapper, StyledNavList } from './styled';
+import { Nav, StyledNavList } from './styled';
 
 type PropsT = {
-  links: NavLink[];
+  links: SidebarNavLink[];
 };
+
 const NavList: FC<PropsT> = (props) => {
   const { links } = props;
   return (
-    <IconNavListWrapper>
+    <Nav>
       <StyledNavList>
         {links.map((link) => {
           return <IconNavLink key={link.to} {...link} />;
         })}
       </StyledNavList>
-    </IconNavListWrapper>
+    </Nav>
   );
 };
 

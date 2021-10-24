@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { useRouter } from 'next/router';
-import { NavBarTabs } from '../../../../../enums/routes';
+import { NavBarRoutes } from '../../../../../enums/routes';
 import NavTab from '../NavTab';
 import { NavTabList, StyledNavBar } from './styled';
 
@@ -10,9 +10,9 @@ type NavBar = {
 };
 
 const LINKS: NavBar[] = [
-  { to: NavBarTabs.profile, text: 'Profile' },
-  { to: NavBarTabs.account, text: 'Account' },
-  { to: NavBarTabs.priceplans, text: 'Price Plans' },
+  { to: NavBarRoutes.profile, text: 'Profile' },
+  { to: NavBarRoutes.account, text: 'Account' },
+  { to: NavBarRoutes.priceplans, text: 'Price Plans' },
 ];
 
 const NavBar: FC = () => {

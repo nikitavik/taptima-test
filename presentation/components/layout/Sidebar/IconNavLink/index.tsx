@@ -1,14 +1,11 @@
 import React, { FC } from 'react';
+import { useRouter } from 'next/router';
 import Link from 'next/link';
+import { SidebarNavLink } from '../../../../../constant/sideBarRouterLinks';
 import IconButton from '../../../common/control/IconButton';
 import { LinkText, StyledIconNavLink, StyledLink } from './styled';
-import { useRouter } from 'next/router';
 
-type PropsT = {
-  to: string;
-  text: string;
-  icon: string;
-};
+type PropsT = SidebarNavLink;
 
 const IconNavLink: FC<PropsT> = (props) => {
   const { to, text, icon } = props;

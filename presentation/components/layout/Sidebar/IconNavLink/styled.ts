@@ -7,18 +7,21 @@ export const StyledIconNavLink = styled.li<{ isActive: boolean }>`
   padding: 0.8rem 0;
   border-radius: 4px;
   transition: all 250ms ease;
-  border-bottom-color: ${(props) => (props.isActive ? props.theme.colors.transparentBlue : '')};
+  border-bottom-color: ${({ theme, isActive }) => (isActive ? theme.colors.transparentBlue : '')};
   cursor: pointer;
-  border-left: ${(props) => (props.isActive ? `2px solid ${props.theme.colors.primaryBlue}` : '')};
+  border-left: ${({ theme, isActive }) =>
+          isActive ? `2px solid ${theme.colors.primaryBlue}` : ''};
   &:hover {
-    background-color: ${(props) => props.theme.colors.transparentBlue};
-    border-left: 2px solid ${(props) => props.theme.colors.primaryBlue};
+    background-color: ${({ theme }) => theme.colors.transparentBlue};
+    border-left: 2px solid ${({ theme }) => theme.colors.primaryBlue};
   }
 `;
+
 export const StyledLink = styled.a`
   display: flex;
   align-items: center;
 `;
+
 export const LinkText = styled.span`
   margin-left: 0.5rem;
   color: ${(props) => props.theme.colors.lightFont};

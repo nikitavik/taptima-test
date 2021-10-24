@@ -7,8 +7,11 @@ export enum SidebarRoutes {
   icons = '/icons',
   support = '/support',
 }
-export enum NavBarTabs {
+export enum NavBarRoutes {
   profile = '/settings/profile',
   account = '/settings/account',
   priceplans = '/settings/priceplans',
 }
+
+export type SidebarRoutesT = SidebarRoutes
+export type NavBarRoutesT = NavBarRoutes
