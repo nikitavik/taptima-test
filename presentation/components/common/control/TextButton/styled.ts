@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { ButtonColors } from '../../../../enums/styledComponents';
-import { attributePicker } from '../../../../helpers/styledComponents';
+import { ButtonColors } from '../../../../../enums/styledComponents';
+import { attributePicker } from '../../../../../helper/styledComponents';
 
 export const StyledTextButton = styled.button<{ color: ButtonColors }>`
   padding: 0.75rem 0.875rem;

@@ -1,19 +1,19 @@
 import React, { ButtonHTMLAttributes, FC } from 'react';
-import { ButtonColors } from '../../../../enums/styledComponents';
-import { StyledPrimaryButton } from './styled';
+import { ButtonColors } from '../../../../../enums/styledComponents';
+import { StyledTextButton } from './styled';
 
 type PropsT = ButtonHTMLAttributes<HTMLButtonElement> & {
   color: ButtonColors.primary | ButtonColors.secondary;
   onClick?: () => void;
 };
 
-const PrimaryButton: FC<PropsT> = (props) => {
+const TextButton: FC<PropsT> = (props) => {
   const { children, color, onClick, ...restProps } = props;
   return (
-    <StyledPrimaryButton color={color} onClick={onClick} {...restProps}>
+    <StyledTextButton color={color} onClick={onClick} {...restProps}>
       {children}
-    </StyledPrimaryButton>
+    </StyledTextButton>
   );
 };
 
-export default PrimaryButton;
+export default TextButton;

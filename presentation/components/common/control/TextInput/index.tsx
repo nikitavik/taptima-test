@@ -1,7 +1,7 @@
 import React, { FC, InputHTMLAttributes } from 'react';
 import { InputErrorMessage, InputLabel, InputWrapper, StyledTextInput } from './styled';
 import { useController, UseControllerProps } from 'react-hook-form';
-import { BasicFormInputs } from '../../page/settings/BasicProfileCard';
+import { BasicFormInputs } from '../../../page/settings/BasicProfileCard';
 
 type PropsT = InputHTMLAttributes<HTMLInputElement> &
   UseControllerProps<BasicFormInputs> & {

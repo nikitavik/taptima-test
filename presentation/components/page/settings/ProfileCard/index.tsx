@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 import profile from '/public/images/profile.png';
 import { ButtonColors } from '../../../../../enums/styledComponents';
-import Card from '../../../common/Card';
-import TextButton from '../../../common/TextButton';
+import Card from '../../../common/block/Card';
+import TextButton from '../../../common/control/TextButton';
 import { ProfileCards } from '../../../../../enums/profileCards';
 import {
   ProfileCardFooter,

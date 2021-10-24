@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { attributePicker } from '../../../../helpers/styledComponents';
+import { attributePicker } from '../../../../../helper/styledComponents';
 
 export const InputWrapper = styled.div`
   position: relative;

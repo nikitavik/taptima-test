@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import MainLayout from '../../../presentation/components/layout/MainLayout';
 import NavBar from '../../../presentation/components/page/settings/NavBar';
-import Card from '../../../presentation/components/common/Card';
+import Card from '../../../presentation/components/common/block/Card';
 import ProfileCard from '../../../presentation/components/page/settings/ProfileCard';
 import BasicProfileCard from '../../../presentation/components/page/settings/BasicProfileCard';
 import { PageLayout } from './styled';

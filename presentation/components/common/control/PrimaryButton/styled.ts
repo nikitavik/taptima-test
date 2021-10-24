@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { attributePicker } from '../../../../helpers/styledComponents';
+import { attributePicker } from '../../../../../helper/styledComponents';
 
 export const StyledPrimaryButton = styled.button<{ color: string }>`
   padding: 0.75rem 1rem;

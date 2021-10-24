@@ -1,7 +1,7 @@
 import React, { FC, useState } from 'react';
-import Card from '../../../common/Card';
+import Card from '../../../common/block/Card';
 import { ProfileCards } from '../../../../../enums/profileCards';
-import PrimaryButton from '../../../common/PrimaryButton';
+import PrimaryButton from '../../../common/control/PrimaryButton';
 import { ButtonColors } from '../../../../../enums/styledComponents';
 import {
   BasicCardFooter,
@@ -10,7 +10,7 @@ import {
   BasicHeaderTitle,
 } from './styled';
 import { useForm } from 'react-hook-form';
-import TextInput from '../../../common/TextInput';
+import TextInput from '../../../common/control/TextInput';
 import styled from 'styled-components';
 import { FORM_INPUTS } from './formInputs';
 

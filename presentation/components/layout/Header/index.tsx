@@ -8,7 +8,7 @@ import { HeaderButtonsWrapper, StyledHeader } from './styled';
 import bell from '/public/icons/bell.svg';
 import exit from '/public/icons/exit.svg';
 
-import IconButton from '../../common/IconButton';
+import IconButton from '../../common/control/IconButton';
 
 const Header: FC = () => {
   return (
