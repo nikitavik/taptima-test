@@ -1,13 +1,13 @@
 import styled from "styled-components";
 import {ButtonColors} from "../../../../enums/styledComponents";
-import {colorPicker} from "../../../../helpers/styledComponents";
+import {attributePicker} from "../../../../helpers/styledComponents";
 
 export const StyledTextButton = styled.button<{color: ButtonColors} >`
   padding:  0.75rem 0.875rem;
   background: transparent;
   border: none;
-  ${({ color,theme }) => color === 'primary' && colorPicker(theme.colors.primaryBlue)}
-  ${({ color, theme }) => color === 'secondary' && colorPicker(theme.colors.secondaryBlue)}
+  ${({ color,theme }) => color === 'primary' && attributePicker("color", theme.colors.primaryBlue)}
+  ${({ color, theme }) => color === 'secondary' && attributePicker("color", theme.colors.secondaryBlue)}
   font-weight: 500;
   font-size: 0.75rem;
   line-height: 133%;
@@ -21,8 +21,8 @@ export const StyledTextButton = styled.button<{color: ButtonColors} >`
     color: ${props => props.theme.colors.darkenBlue};
   }
   &:active{
-    ${({ color,theme }) => color === 'primary' && colorPicker(theme.colors.primaryBlue)}
-    ${({ color, theme }) => color === 'secondary' && colorPicker(theme.colors.secondaryBlue)}
+    ${({ color,theme }) => color === 'primary' && attributePicker("color", theme.colors.primaryBlue)}
+    ${({ color, theme }) => color === 'secondary' && attributePicker("color", theme.colors.secondaryBlue)}
   }
   &:disabled{
     color: ${props => props.theme.colors.gray33};
