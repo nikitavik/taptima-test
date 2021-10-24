@@ -1,41 +1,41 @@
 import React, { FC } from 'react';
 import profile from '/public/images/profile.png';
 import { ButtonColors } from '../../../../../enums/styledComponents';
+import { CardAreas } from '../../../../../enums/cardAreas';
 import Card from '../../../common/block/Card';
 import TextButton from '../../../common/control/TextButton';
 import {
-  ProfileCardFooter,
-  ProfileCardSubtitle,
-  ProfileCardTitle,
-  ProfileImage,
-  ProfileImageWrapper,
-  ProfileTextWrapper,
+  Footer,
+  CardSubtitle,
+  CardTitle,
+  Image,
+  ImageWrapper,
+  TextWrapper,
   StyledProfileCard,
 } from './styled';
-import { CardAreas } from '../../../../../enums/cardAreas';
 
 const ProfileCard: FC = () => {
   return (
     <Card
       area={CardAreas.profile}
       footer={
-        <ProfileCardFooter>
+        <Footer>
           <TextButton color={ButtonColors.primary}>Upload picture</TextButton>
           <TextButton color={ButtonColors.secondary}>Remove picture</TextButton>
-        </ProfileCardFooter>
+        </Footer>
       }
     >
       <StyledProfileCard>
-        <ProfileTextWrapper>
-          <ProfileCardTitle>Adrian Stefan</ProfileCardTitle>
-          <ProfileCardSubtitle>
+        <TextWrapper>
+          <CardTitle>Adrian Stefan</CardTitle>
+          <CardSubtitle>
             Rm. Valcea, Romania <br />
             4:32PM (GMT-4)
-          </ProfileCardSubtitle>
-        </ProfileTextWrapper>
-        <ProfileImageWrapper>
-          <ProfileImage src={profile.src} alt="Profile image" />
-        </ProfileImageWrapper>
+          </CardSubtitle>
+        </TextWrapper>
+        <ImageWrapper>
+          <Image src={profile.src} alt="Profile image" />
+        </ImageWrapper>
       </StyledProfileCard>
     </Card>
   );
