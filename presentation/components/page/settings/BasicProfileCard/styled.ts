@@ -22,5 +22,7 @@ export const BasicCardHeaderSubTitle = styled.div`
   color: #66788A;
 `
 export const BasicCardFooter = styled.div`
+    display: flex;
+    align-items: center;
     margin: 1.5rem;
 `

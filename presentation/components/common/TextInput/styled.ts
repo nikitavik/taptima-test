@@ -1,10 +1,11 @@
 import styled from "styled-components";
+import { attributePicker } from "../../../../helpers/styledComponents";
 
 export const InputWrapper = styled.div`
   position: relative;
 `
 
-export const InputLabel = styled.label`
+export const InputLabel = styled.label<{isInvalid: boolean}>`
     position: absolute;
     left: 0;
     top: 2px;
@@ -14,21 +15,24 @@ export const InputLabel = styled.label`
   letter-spacing: 0.15px;
   color: ${props => props.theme.colors.gray6};
   cursor: text;
-  transition: all 0.2s ease; 
+  transition: all 0.2s ease;
+  ${({ isInvalid, theme }) => isInvalid && attributePicker("color", `${theme.colors.redAccent} !important;`)}
 `
 
-export const StyledTextInput = styled.input`
+export const StyledTextInput = styled.input<{isInvalid: boolean}>`
+  box-sizing: border-box;
   width: 100%;
     padding: 1rem;
-    border: 1px solid ${props => props.theme.borders.gray1pxBorder};
     border-radius: 4px;
     outline: none;
   font-size: 1rem;
   line-height: 150%;
-  letter-spacing: 0.15px;
+  max-height: 3.6rem;
+  letter-spacing: 0.15px; 
   color: ${props => props.theme.colors.gray6};
   transition: all 0.2s ease;
-
+  border: ${props => props.theme.borders.gray1pxBorder};
+  ${({ isInvalid, theme }) => isInvalid && attributePicker("border", `2px solid ${theme.colors.redAccent} !important;`)}
   &:hover{
       border: 2px solid ${props => props.theme.colors.primaryBlue}
     }
@@ -62,5 +66,5 @@ export const InputErrorMessage = styled.div`
   font-size: 0.75rem;
   line-height: 133%;
   letter-spacing: 0.4px;
-  color: ${props => props.theme.colors.gray6};
+  color: ${props => props.theme.colors.redAccent};
 `

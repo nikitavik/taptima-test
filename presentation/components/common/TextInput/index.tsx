@@ -11,14 +11,15 @@ const TextInput: FC<PropsT> = (props) => {
     const {field, fieldState} = useController(restProps)
     const {name} = field
     const { error } = fieldState
-    console.log(error)
     return (
         <>
             <InputWrapper>
                 <StyledTextInput
                     {...field}
+                    id={name}
+                    isInvalid={!!error}
                 />
-                <InputLabel htmlFor={name}>{ label }</InputLabel>
+                <InputLabel htmlFor={name} isInvalid={!!error}>{ label }</InputLabel>
                 <InputErrorMessage>{ error?.message }</InputErrorMessage>
             </InputWrapper>
         </>

@@ -44,7 +44,8 @@ const theme = {
         transparentBlue: "#F6F9FD",
         gray33: "rgba(0, 0, 0, 0.33)",
         gray6: " rgba(0, 0, 0, 0.6)",
-        white: "#fafafa"
+        white: "#fafafa",
+        redAccent: "#EC4C47"
     },
     sizes: {
         headerHeight: "64px",
