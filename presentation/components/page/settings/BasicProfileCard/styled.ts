@@ -1,27 +1,40 @@
 import styled from 'styled-components';
 
-export const BasicCardHeader = styled.div`
+export const CardHeader = styled.div`
   display: flex;
   align-items: baseline;
   margin: 1.625rem 1.5rem;
 `;
-export const BasicHeaderTitle = styled.div`
+export const HeaderTitle = styled.div`
   font-weight: 500;
   font-size: 1rem;
   line-height: 125%;
   letter-spacing: -0.05px;
   white-space: nowrap;
 `;
-export const BasicCardHeaderSubTitle = styled.div`
+export const HeaderSubTitle = styled.div`
   margin-left: 1rem;
   font-weight: 300;
   font-size: 0.875rem;
   line-height: 114%;
 
-  color: #66788a;
+  color: ${({ theme }) => theme.colors.lightFont};
 `;
-export const BasicCardFooter = styled.div`
+export const CardFooter = styled.div`
   display: flex;
   align-items: center;
   margin: 1.5rem;
+`;
+export const StyledForm = styled.form`
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(150px, 1fr));
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 1.5rem;
+`;
+export const StatusMessage = styled.div<{ isSuccessful: boolean }>`
+  margin-left: 1rem;
+  font-size: 1rem;
+  color: ${({ isSuccessful, theme }) =>
+    isSuccessful ? theme.colors.accentGreen : theme.colors.redAccent};
 `;

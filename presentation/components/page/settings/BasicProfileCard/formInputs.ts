@@ -1,7 +1,15 @@
 import { UseControllerProps } from 'react-hook-form';
 import { InputHTMLAttributes } from 'react';
 import { EMAIL_REGEX } from '../../../../../constant/regEx';
-import { BasicFormInputs } from './index';
+
+export type BasicFormInputs = {
+  firstName: string;
+  lastName: string;
+  email: string;
+  phoneNumber: string;
+  country: string;
+  region: string;
+};
 
 export const FORM_INPUTS: Array<
   UseControllerProps<BasicFormInputs> & InputHTMLAttributes<HTMLInputElement> & { label: string }

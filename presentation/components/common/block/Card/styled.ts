@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledCard = styled.div<{ area: string }>`
+export const StyledCard = styled.section<{ area: string }>`
   border: ${({ theme }) => theme.borders.light1pxBorder};
   box-shadow: ${({ theme }) => theme.shadows.lightShadow};
   border-radius: 4px;

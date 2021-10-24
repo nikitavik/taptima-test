@@ -19,13 +19,13 @@ export const StyledAlert = styled.div`
   border-radius: 4px;
   background-color: ${({ theme }) => theme.colors.lightGray23};
 `;
-export const Text = styled.div`
-  margin-left: 0.875rem;
+export const Text = styled.p`
+  margin: 0 0 0 0.875rem;
   color: ${({ theme }) => theme.colors.lightBlue};
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 114%;
   & a {
-    color: #fff;
+    color: ${({ theme }) => theme.colors.white};
   }
 `;

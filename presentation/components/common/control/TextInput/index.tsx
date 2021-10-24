@@ -1,10 +1,9 @@
 import React, { FC, InputHTMLAttributes } from 'react';
 import { useController, UseControllerProps } from 'react-hook-form';
-import { BasicFormInputs } from '../../../page/settings/BasicProfileCard';
 import { ErrorMessage, Label, Wrapper, Input } from './styled';
 
 type PropsT = InputHTMLAttributes<HTMLInputElement> &
-  UseControllerProps<BasicFormInputs> & {
+  UseControllerProps<any> & {
     label: string;
   };
 const TextInput: FC<PropsT> = (props) => {

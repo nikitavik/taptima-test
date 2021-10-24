@@ -14,12 +14,12 @@ export const StyledSidebar = styled.aside`
   overflow-y: auto;
   grid-area: sidebar;
 `;
-export const Subtitle = styled.div`
+export const Subtitle = styled.h6`
   color: ${(props) => props.theme.colors.gray33};
   font-size: 0.82rem;
   font-weight: 500;
   line-height: 108%;
-  margin-left: 1rem;
+  margin: 0 0 0 1rem;
 `;
 export const Subsection = styled.div`
   margin: 1.5rem 1.5rem 0;
