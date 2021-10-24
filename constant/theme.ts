@@ -14,7 +14,8 @@ export const theme = {
     transparentBlue: '#F6F9FD',
     gray33: 'rgba(0, 0, 0, 0.33)',
     gray6: ' rgba(0, 0, 0, 0.6)',
-    white: '#fafafa',
+    darkenWhite: '#fafafa',
+    white: "#FFFFFF",
     redAccent: '#EC4C47',
   },
   sizes: {

@@ -19,7 +19,7 @@ export const StyledTextButton = styled.button<{ color: ButtonColors }>`
   cursor: pointer;
   transition: all 250ms ease-in;
   &:hover {
-    color: ${(props) => props.theme.colors.darkenBlue};
+    color: ${({ theme }) => theme.colors.darkenBlue};
   }
   &:active {
     ${({ color, theme }) =>
@@ -28,7 +28,7 @@ export const StyledTextButton = styled.button<{ color: ButtonColors }>`
       color === 'secondary' && attributePicker('color', theme.colors.secondaryBlue)}
   }
   &:disabled {
-    color: ${(props) => props.theme.colors.gray33};
+    color: ${({ theme }) => theme.colors.gray33};
     cursor: auto;
   }
 `;

@@ -1,6 +1,6 @@
 import React, { FC, ReactNode } from 'react';
 import { CardAreaT } from '../../../../../enums/cardAreas';
-import { CardFooter, CardHeader, StyledCard } from './styled';
+import { Footer, Header, StyledCard } from './styled';
 
 type PropsT = {
   header?: ReactNode;
@@ -12,9 +12,9 @@ const Card: FC<PropsT> = (props) => {
   const { children, header, footer, area } = props;
   return (
     <StyledCard area={area}>
-      {header ? <CardHeader>{header}</CardHeader> : ''}
+      {header ? <Header>{header}</Header> : ''}
       {children}
-      {footer ? <CardFooter>{footer}</CardFooter> : ''}
+      {footer ? <Footer>{footer}</Footer> : ''}
     </StyledCard>
   );
 };

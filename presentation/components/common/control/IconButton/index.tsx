@@ -5,7 +5,7 @@ import { StyledIconButton } from './styled';
 type PropsT = {
   src: string;
   color: string;
-  size: number | string;
+  size: number;
   onClick?: () => void;
 };
 

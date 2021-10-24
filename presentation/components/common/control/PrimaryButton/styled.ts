@@ -28,7 +28,7 @@ export const StyledPrimaryButton = styled.button<{ color: string }>`
       color === 'primary' && attributePicker('background-color', theme.colors.darkenBlue)}
     ${({ color, theme }) =>
       color === 'secondary' && attributePicker('background-color', theme.colors.primaryBlue)}
-    ${({ color }) => color === 'secondary' && attributePicker('color', '#fff')}
+    ${({ color, theme }) => color === 'secondary' && attributePicker('color', theme.colors.white)}
   }
   &:active {
     ${({ color, theme }) =>
@@ -38,8 +38,8 @@ export const StyledPrimaryButton = styled.button<{ color: string }>`
     ${({ color }) => color === 'secondary' && attributePicker('background-color', 'transparent')}
   }
   &:disabled {
-    background-color: ${(props) => props.theme.colors.gray33};
-    color: ${(props) => props.theme.colors.white};
+    background-color: ${({ theme }) => theme.colors.gray33};
+    color: ${({ theme }) => theme.colors.white};
     cursor: auto;
   }
 `;
