@@ -50,7 +50,7 @@ export const StyledTextInput = styled.input`
     padding: 0.2rem;
     
   }
-  &[value=""] ~ label{
+  &:not([value=""]) ~ label{
     font-size: 0.75rem;
     transform: translateY(-125%);
     background-color: #fff;
