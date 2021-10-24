@@ -1,14 +1,30 @@
 import React, { FC } from 'react';
 import bell from '/public/icons/bell.svg';
 import exit from '/public/icons/exit.svg';
+import burger from '/public/icons/burger.svg';
+import IconButton from '../../common/control/IconButton';
 import Logo from './Logo';
 import Alert from './Alert';
-import IconButton from '../../common/control/IconButton';
-import { ButtonsWrapper, StyledHeader } from './styled';
+import { BurgerWrapper, ButtonsWrapper, StyledHeader } from './styled';
+import { ReactSVG } from 'react-svg';
 
-const Header: FC = () => {
+type PropsT = {
+  onToggleSidebar: () => void;
+};
+
+const Header: FC<PropsT> = (props) => {
+  const { onToggleSidebar } = props;
   return (
     <StyledHeader>
+      <BurgerWrapper onClick={onToggleSidebar}>
+        <ReactSVG
+          src={burger.src}
+          beforeInjection={(svg) => {
+            svg.setAttribute('style', 'width: 36px');
+            svg.setAttribute('style', 'height: 36px');
+          }}
+        />
+      </BurgerWrapper>
       <Logo />
       <Alert />
       <ButtonsWrapper>

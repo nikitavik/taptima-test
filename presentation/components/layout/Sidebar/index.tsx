@@ -5,11 +5,17 @@ import { SidebarRoutes } from '../../../../enums/routes';
 import UserProfile from './UserProfile';
 import IconNavLink from './IconNavLink';
 import NavList from './NavList';
-import { Subsection, Subtitle, StyledSidebar } from './styled';
+import { Subsection, Subtitle, StyledSidebar, SidebarCross } from './styled';
 
-const Sidebar: FC = () => {
+type PropsT = {
+  isOpen: boolean;
+  onToggleSidebar: () => void;
+};
+const Sidebar: FC<PropsT> = (props) => {
+  const { isOpen, onToggleSidebar } = props;
   return (
-    <StyledSidebar>
+    <StyledSidebar isOpen={isOpen}>
+      <SidebarCross onClick={onToggleSidebar}>&times;</SidebarCross>
       <UserProfile />
       <NavList links={SIDEBAR_LINKS} />
       <Subsection>

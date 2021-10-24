@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { mq } from '../../../../../constant/mediaqueries';
 
 export const Tag = styled.div`
   color: ${({ theme }) => theme.colors.white};
@@ -14,10 +15,14 @@ export const Tag = styled.div`
 `;
 export const StyledAlert = styled.div`
   display: flex;
+  align-items: center;
   margin-left: 2.25rem;
   padding: 0.375rem 1rem 0.375rem 0.375rem;
   border-radius: 4px;
   background-color: ${({ theme }) => theme.colors.lightGray23};
+  ${mq.xs} {
+    display: none;
+  }
 `;
 export const Text = styled.p`
   margin: 0 0 0 0.875rem;

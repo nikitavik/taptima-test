@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { mq } from '../../../../constant/mediaqueries';
 
 export const MainContent = styled.div`
   margin: 0;
@@ -13,4 +14,10 @@ export const MainContainer = styled.main`
   grid-template-areas:
     'header header'
     'sidebar main';
+  ${mq.xs} {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'header'
+      'main';
+  }
 `;

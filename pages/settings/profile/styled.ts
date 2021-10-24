@@ -13,7 +13,8 @@ export const PageLayout = styled.div`
     '. notifications'
     '. notifications';
   ${mq.sm} {
-    grid-template-columns: auto;
+    padding: 0.5rem;
+    grid-template-columns: 1fr;
     column-gap: 0;
     grid-template-areas:
       'profile'
