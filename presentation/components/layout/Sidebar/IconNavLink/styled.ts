@@ -10,7 +10,7 @@ export const StyledIconNavLink = styled.li<{ isActive: boolean }>`
   border-bottom-color: ${({ theme, isActive }) => (isActive ? theme.colors.transparentBlue : '')};
   cursor: pointer;
   border-left: ${({ theme, isActive }) =>
-          isActive ? `2px solid ${theme.colors.primaryBlue}` : ''};
+    isActive ? `2px solid ${theme.colors.primaryBlue}` : ''};
   &:hover {
     background-color: ${({ theme }) => theme.colors.transparentBlue};
     border-left: 2px solid ${({ theme }) => theme.colors.primaryBlue};
@@ -22,7 +22,7 @@ export const StyledLink = styled.a`
   align-items: center;
 `;
 
-export const LinkText = styled.span`
+export const LinkText = styled.h2`
   margin-left: 0.5rem;
   color: ${(props) => props.theme.colors.lightFont};
   font-size: 0.875rem;

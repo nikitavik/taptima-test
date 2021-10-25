@@ -23,11 +23,12 @@ export const ButtonsWrapper = styled.div`
 `;
 
 export const BurgerWrapper = styled.div`
+  box-sizing: content-box;
   display: none;
   ${mq.xs} {
     display: flex;
     align-items: center;
-    padding: 0.8rem 0.5rem 0.8rem 0.8rem;
+    padding: 0.8rem 0.8rem 0.8rem 0.8rem;
     height: 25px;
     width: 25px;
     fill: #fff;

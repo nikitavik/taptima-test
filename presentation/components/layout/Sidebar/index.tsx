@@ -5,7 +5,7 @@ import { SidebarRoutes } from '../../../../enums/routes';
 import UserProfile from './UserProfile';
 import IconNavLink from './IconNavLink';
 import NavList from './NavList';
-import { Subsection, Subtitle, StyledSidebar, SidebarCross } from './styled';
+import { Subsection, Subtitle, StyledSidebar, SidebarCross, SubsectionList } from './styled';
 
 type PropsT = {
   isOpen: boolean;
@@ -20,7 +20,9 @@ const Sidebar: FC<PropsT> = (props) => {
       <NavList links={SIDEBAR_LINKS} />
       <Subsection>
         <Subtitle>Support</Subtitle>
-        <IconNavLink to={SidebarRoutes.support} text="Support" icon={support.src} />
+        <SubsectionList>
+          <IconNavLink to={SidebarRoutes.support} text="Support" icon={support.src} />
+        </SubsectionList>
       </Subsection>
     </StyledSidebar>
   );

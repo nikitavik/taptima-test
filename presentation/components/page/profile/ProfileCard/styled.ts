@@ -14,7 +14,9 @@ export const Footer = styled.div`
 `;
 export const TextWrapper = styled.div``;
 
-export const CardTitle = styled.div`
+export const CardTitle = styled.h3`
+  padding: 0;
+  margin: 0;
   color: ${({ theme }) => theme.colors.deepBlackFont};
   font-weight: 500;
   font-size: 1.5rem;
@@ -22,8 +24,11 @@ export const CardTitle = styled.div`
   letter-spacing: -0.06px;
   white-space: nowrap;
 `;
-export const CardSubtitle = styled.div`
+export const CardSubtitle = styled.h4`
+  padding: 0;
+  margin: 0.625rem 0 0 0;
   font-size: 0.875rem;
+  font-weight: normal;
   line-height: 143%;
   letter-spacing: -0.05px;
   color: ${({ theme }) => theme.colors.subFont};

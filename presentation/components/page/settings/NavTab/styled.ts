@@ -13,11 +13,15 @@ export const StyledNavTab = styled.li<{ isActive: boolean }>`
 `;
 
 export const StyledLink = styled.a`
+  display: flex;
+  align-items: center;
   width: 100%;
   height: 100%;
 `;
 
-export const TabText = styled.span`
+export const TabText = styled.h2`
+  padding: 0;
+  margin: 0;
   font-weight: 500;
   font-size: 1rem;
   line-height: 125%;

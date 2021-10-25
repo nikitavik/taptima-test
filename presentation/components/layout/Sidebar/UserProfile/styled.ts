@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledUserProfile = styled.div`
+export const StyledUserProfile = styled.section`
   margin: 1.5rem 1rem 0;
   padding-bottom: 1.5rem;
   display: flex;
@@ -9,7 +9,7 @@ export const StyledUserProfile = styled.div`
   border-bottom: ${(props) => props.theme.borders.gray1pxBorder};
   cursor: pointer;
 `;
-export const AvatarWrapper = styled.div`
+export const AvatarWrapper = styled.figure`
   width: 100px;
   height: 100px;
   border-radius: 50%;

@@ -9,15 +9,20 @@ export const CardHeader = styled.div`
     flex-direction: column;
   }
 `;
-export const HeaderTitle = styled.div`
+
+export const HeaderTitle = styled.h3`
+  padding: 0;
+  margin: 0;
   font-weight: 500;
   font-size: 1rem;
   line-height: 125%;
   letter-spacing: -0.05px;
   white-space: nowrap;
 `;
-export const HeaderSubTitle = styled.div`
-  margin-left: 1rem;
+
+export const HeaderSubTitle = styled.h4`
+  margin: 0 0 0 1rem;
+  padding: 0;
   font-weight: 300;
   font-size: 0.875rem;
   line-height: 114%;

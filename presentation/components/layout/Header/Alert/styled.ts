@@ -2,16 +2,15 @@ import styled from 'styled-components';
 import { mq } from '../../../../../constant/mediaqueries';
 
 export const Tag = styled.div`
-  color: ${({ theme }) => theme.colors.white};
+  color: ${({ theme }) => theme.colors.darkenWhite};
   font-weight: 500;
   font-size: 0.625rem;
   line-height: 120%;
   letter-spacing: 0.3px;
   background-color: ${({ theme }) => theme.colors.accentGreen};
-  padding: 0.1875rem 0.375rem;
+  padding: 0.25rem 0.5rem;
   border-radius: 4px;
   text-transform: uppercase;
-  max-height: 0.8rem;
 `;
 export const StyledAlert = styled.div`
   display: flex;

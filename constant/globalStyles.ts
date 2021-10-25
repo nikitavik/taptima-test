@@ -1,26 +1,47 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle, css } from 'styled-components';
 import { mq } from './mediaqueries';
+
+const PROJECT_FONT = css`
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
+    Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+`;
 
 export const GlobalStyles = createGlobalStyle`
   html, body {
-    font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     padding: 0;
     margin: 0;
     font-size: 14px;
     color: #3A3B3F;
-    overflow: hidden;
-    ${mq.sm} {
-      font-size: 12px;
+    overflow-y: auto;
+    ${mq.xs} {
+        font-size: 12px;
     }
+    ${PROJECT_FONT};
+  }
+  *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
   }
   a {
     color: inherit;
     text-decoration: none;
   }
-  input, button {
+  input, button, select, textarea {
     box-sizing: border-box;
-    font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    ${PROJECT_FONT}
+  }
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+      -webkit-text-fill-color: inherit;
+      -webkit-box-shadow: inherit;
+      transition: background-color 5000s ease-in-out 0s;
   }
 `;

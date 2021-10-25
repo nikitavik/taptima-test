@@ -12,7 +12,7 @@ export const StyledSidebar = styled.aside<{ isOpen: boolean }>`
   box-shadow: ${({ theme }) => theme.shadows.mainShadow};
   top: ${({ theme }) => theme.sizes.headerHeight};
   max-width: ${({ theme }) => theme.sizes.sidebarWidth};
-  overflow-y: auto;
+  overflow-y: hidden;
   grid-area: sidebar;
   transition: all 0.2s ease-in;
   ${mq.xs} {
@@ -26,17 +26,25 @@ export const StyledSidebar = styled.aside<{ isOpen: boolean }>`
     z-index: 1000;
   }
 `;
-export const Subtitle = styled.h6`
+
+export const Subtitle = styled.h3`
   color: ${(props) => props.theme.colors.gray33};
-  font-size: 0.82rem;
+  font-size: 0.875rem;
   font-weight: 500;
   line-height: 108%;
-  margin: 0 0 0 1rem;
+  margin-left: 1.25rem;
 `;
 
-export const Subsection = styled.div`
+export const Subsection = styled.nav`
   margin: 1.5rem 1.5rem 0;
 `;
+
+export const SubsectionList = styled.ul`
+  list-style: none;
+  padding: 0;
+  margin: 0;
+`;
+
 export const SidebarCross = styled.div`
   display: none;
   ${mq.xs} {

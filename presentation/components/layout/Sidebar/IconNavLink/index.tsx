@@ -13,7 +13,7 @@ const IconNavLink: FC<PropsT> = (props) => {
   return (
     <Link href={to} passHref>
       <StyledIconNavLink isActive={route === to}>
-        <StyledLink>
+        <StyledLink href={to}>
           <IconButton src={icon} color={'#66788A'} size={24} />
           <LinkText>{text}</LinkText>
         </StyledLink>
