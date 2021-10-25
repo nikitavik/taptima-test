@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { mq } from '../../../../../constant/mediaqueries';
 
-export const Tag = styled.div`
+export const Tag = styled.figure`
   color: ${({ theme }) => theme.colors.darkenWhite};
   font-weight: 500;
   font-size: 0.625rem;

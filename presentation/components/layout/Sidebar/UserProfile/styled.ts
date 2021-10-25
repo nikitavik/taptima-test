@@ -20,13 +20,17 @@ export const AvatarImage = styled.img`
   height: 100%;
   background-color: ${(props) => props.theme.colors.gray33};
 `;
-export const UserName = styled.div`
+export const UserName = styled.h2`
+  font-weight: normal;
+  font-style: normal;
   margin-top: 1rem;
   font-size: 1rem;
   line-height: 125%;
   letter-spacing: -0.05px;
 `;
-export const UserRole = styled.div`
+export const UserRole = styled.h3`
+  font-weight: normal;
+  font-style: normal;
   margin-top: 0.25rem;
   font-size: 0.75rem;
   line-height: 133%;

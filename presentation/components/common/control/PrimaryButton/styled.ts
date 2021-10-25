@@ -15,6 +15,7 @@ export const StyledPrimaryButton = styled.button<{ color: string }>`
   ${({ color, theme }) =>
     color === 'secondary' && attributePicker('border', theme.borders.lightBlue1pxBorder)}
   border-radius: 4px;
+  min-width: 7.5rem;
   font-weight: 500;
   font-size: 0.875rem;
   line-height: 114%;

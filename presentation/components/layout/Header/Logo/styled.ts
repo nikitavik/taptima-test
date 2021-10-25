@@ -7,7 +7,7 @@ export const StyledLogo = styled.div`
   cursor: pointer;
 `;
 
-export const ImageWrapper = styled.div`
+export const ImageWrapper = styled.figure`
   height: 36px;
   width: 36px;
   fill: ${({ theme }) => theme.colors.white};

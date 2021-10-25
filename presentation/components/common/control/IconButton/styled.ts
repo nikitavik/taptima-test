@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledIconButton = styled.div<{ size: number | string; color: string }>`
+export const StyledIconButton = styled.figure<{ size: number | string; color: string }>`
   display: flex;
   justify-content: center;
   align-items: center;

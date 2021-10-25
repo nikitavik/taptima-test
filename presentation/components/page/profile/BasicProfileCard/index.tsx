@@ -5,15 +5,9 @@ import { ButtonColors } from '../../../../../enums/styledComponents';
 import Card from '../../../common/block/Card';
 import PrimaryButton from '../../../common/control/PrimaryButton';
 import TextInput from '../../../common/control/TextInput';
+import { CardFooter, CardHeader, HeaderSubTitle, HeaderTitle } from '../styled';
 import { BasicFormInputs, FORM_INPUTS } from './formInputs';
-import {
-  CardFooter,
-  CardHeader,
-  HeaderSubTitle,
-  HeaderTitle,
-  StatusMessage,
-  StyledForm,
-} from './styled';
+import { StatusMessage, StyledForm } from './styled';
 
 const defaultValues = {
   firstName: '',

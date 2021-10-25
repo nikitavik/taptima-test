@@ -1,7 +1,7 @@
 export enum CardAreas {
   profile = 'profile',
   basicProfile = 'basicProfile',
-  notification = 'notification',
+  notification = 'notifications',
 }
 
-export type CardAreaT = CardAreas
+export type CardAreaT = CardAreas;

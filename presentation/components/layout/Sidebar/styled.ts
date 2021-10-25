@@ -45,7 +45,7 @@ export const SubsectionList = styled.ul`
   margin: 0;
 `;
 
-export const SidebarCross = styled.div`
+export const SidebarCross = styled.figure`
   display: none;
   ${mq.xs} {
     display: block;
@@ -54,5 +54,6 @@ export const SidebarCross = styled.div`
     right: 0;
     padding: 1rem;
     font-size: 3rem;
+    cursor: pointer;
   }
 `;

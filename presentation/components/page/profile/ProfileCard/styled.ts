@@ -34,7 +34,7 @@ export const CardSubtitle = styled.h4`
   color: ${({ theme }) => theme.colors.subFont};
 `;
 
-export const ImageWrapper = styled.div`
+export const ImageWrapper = styled.figure`
   width: 140px;
   height: 140px;
   border-radius: 13px;
