@@ -1,10 +1,10 @@
 import React, { FC, ReactNode } from 'react';
-import { CardAreaT } from '../../../../../enums/cardAreas';
+import { CardAreas } from '../../../../../enums/cardAreas';
 import { Footer, Header, StyledCard } from './styled';
 
 type PropsT = {
   header?: ReactNode;
-  area: CardAreaT;
+  area: CardAreas;
   footer?: ReactNode;
 };
 

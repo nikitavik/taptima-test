@@ -1,7 +1,7 @@
-import { NavBarRoutes, NavBarRoutesT } from '../enums/routes';
+import { NavBarRoutes } from '../enums/routes';
 
 export type NavBarLink = {
-  to: NavBarRoutesT;
+  to: NavBarRoutes;
   text: string;
 };
 

@@ -1,9 +1,9 @@
 import React, { ButtonHTMLAttributes, FC } from 'react';
-import { ButtonColorsT } from '../../../../../enums/styledComponents';
+import { ButtonColors } from '../../../../../enums/styledComponents';
 import { StyledPrimaryButton } from './styled';
 
 type PropsT = ButtonHTMLAttributes<HTMLButtonElement> & {
-  color: ButtonColorsT;
+  color: ButtonColors;
   onClick?: () => void;
 };
 

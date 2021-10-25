@@ -12,6 +12,3 @@ export enum NavBarRoutes {
   account = '/settings/account',
   priceplans = '/settings/priceplans',
 }
-
-export type SidebarRoutesT = SidebarRoutes
-export type NavBarRoutesT = NavBarRoutes

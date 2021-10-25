@@ -4,10 +4,10 @@ import products from '/public/icons/products.svg';
 import auth from '/public/icons/auth.svg';
 import typography from '/public/icons/typography.svg';
 import icons from '/public/icons/icons.svg';
-import { SidebarRoutes, SidebarRoutesT } from '../enums/routes';
+import { SidebarRoutes } from '../enums/routes';
 
 export type SidebarNavLink = {
-  to: SidebarRoutesT;
+  to: SidebarRoutes;
   text: string;
   icon: string;
 };

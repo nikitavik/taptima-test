@@ -3,5 +3,3 @@ export enum CardAreas {
   basicProfile = 'basicProfile',
   notification = 'notifications',
 }
-
-export type CardAreaT = CardAreas;
