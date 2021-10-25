@@ -10,9 +10,10 @@ export const MainContent = styled.div`
 export const MainContainer = styled.main`
   display: grid;
   grid-template-columns: ${(props) => props.theme.sizes.sidebarWidth} auto;
-  grid-template-rows: ${(props) => props.theme.sizes.headerHeight} auto;
+  grid-template-rows: ${(props) => props.theme.sizes.headerHeight} 1fr auto;
   grid-template-areas:
     'header header'
+    'sidebar main';
     'sidebar main';
   ${mq.xs} {
     grid-template-columns: 1fr;

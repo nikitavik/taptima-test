@@ -1,13 +1,16 @@
-import React, { FC, useState } from 'react';
+import React, { FC } from 'react';
 import { useForm } from 'react-hook-form';
 import { CardAreas } from '../../../../../enums/cardAreas';
 import { ButtonColors } from '../../../../../enums/styledComponents';
+import { useFormStatus } from '../../../../../hooks/formStatus.hook';
 import Card from '../../../common/block/Card';
 import PrimaryButton from '../../../common/control/PrimaryButton';
 import TextInput from '../../../common/control/TextInput';
+import FormStatusMessage from '../FormStatusMessage';
 import { CardFooter, CardHeader, HeaderSubTitle, HeaderTitle } from '../styled';
 import { BasicFormInputs, FORM_INPUTS } from './formInputs';
-import { StatusMessage, StyledForm } from './styled';
+import { StyledForm } from './styled';
+import { mockRequest } from '../../../../../data/mockRequest';
 
 const defaultValues = {
   firstName: '',
@@ -24,30 +27,17 @@ const BasicProfileCard: FC = () => {
     reValidateMode: 'onBlur',
     defaultValues,
   });
-  const [showFormState, setShowFormState] = useState(false);
+  const { isShown, showFormStatus } = useFormStatus();
 
   const onSubmit = async (data: BasicFormInputs) => {
-    await new Promise((resolve, reject) => {
-      if (Math.random() > 0.05) {
-        alert(JSON.stringify(data, null, 2));
-        reset(defaultValues);
-        setTimeout(() => {
-          setShowFormState(true);
-          setTimeout(() => {
-            setShowFormState(false);
-          }, 5000);
-          resolve(data);
-        }, 1000);
-      } else {
-        setTimeout(() => {
-          setShowFormState(true);
-          setTimeout(() => {
-            setShowFormState(false);
-          }, 5000);
-          reject('Error');
-        }, 1000);
-      }
-    });
+    try {
+      await mockRequest(data);
+      reset(defaultValues);
+      showFormStatus();
+    } catch (e) {
+      showFormStatus();
+      throw e;
+    }
   };
 
   return (
@@ -74,13 +64,7 @@ const BasicProfileCard: FC = () => {
           >
             Save settings
           </PrimaryButton>
-          <StatusMessage isSuccessful={formState.isSubmitSuccessful}>
-            {showFormState
-              ? formState.isSubmitSuccessful
-                ? `✔ Success`
-                : '✘ Error. Try Again'
-              : ''}
-          </StatusMessage>
+          <FormStatusMessage isSuccessful={formState.isSubmitSuccessful} isShown={isShown} />
         </CardFooter>
       }
     >

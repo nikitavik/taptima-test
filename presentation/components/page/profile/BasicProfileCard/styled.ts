@@ -13,9 +13,3 @@ export const StyledForm = styled.form`
     grid-template-rows: auto;
   }
 `;
-export const StatusMessage = styled.div<{ isSuccessful: boolean }>`
-  margin-left: 1rem;
-  font-size: 1rem;
-  color: ${({ isSuccessful, theme }) =>
-    isSuccessful ? theme.colors.accentGreen : theme.colors.redAccent};
-`;
