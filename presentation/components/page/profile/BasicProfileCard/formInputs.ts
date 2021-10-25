@@ -2,6 +2,12 @@ import { UseControllerProps } from 'react-hook-form';
 import { InputHTMLAttributes } from 'react';
 import { EMAIL_REGEX } from '../../../../../constant/regEx';
 
+export type MaskConfigT = {
+  mask: string;
+  maskChar?: string | null;
+  alwaysShowMask?: boolean;
+};
+
 export type BasicFormInputs = {
   firstName: string;
   lastName: string;
@@ -12,7 +18,11 @@ export type BasicFormInputs = {
 };
 
 export const FORM_INPUTS: Array<
-  UseControllerProps<BasicFormInputs> & InputHTMLAttributes<HTMLInputElement> & { label: string }
+  UseControllerProps<BasicFormInputs> &
+    InputHTMLAttributes<HTMLInputElement> & {
+      label: string;
+      maskConfig?: MaskConfigT;
+    }
 > = [
   {
     name: 'firstName',
@@ -48,6 +58,11 @@ export const FORM_INPUTS: Array<
     type: 'text',
     label: 'Phone Number',
     rules: {},
+    maskConfig: {
+      mask: '+9(999)999-99-99',
+      maskChar: null,
+      alwaysShowMask: false,
+    },
   },
   {
     name: 'country',

@@ -70,7 +70,7 @@ const BasicProfileCard: FC = () => {
     >
       <StyledForm onSubmit={handleSubmit(onSubmit)} id="BasicForm">
         {FORM_INPUTS.map((input) => {
-          const { name, type, label, rules } = input;
+          const { name, type, label, rules, maskConfig } = input;
           return (
             <TextInput
               key={name}
@@ -79,6 +79,7 @@ const BasicProfileCard: FC = () => {
               type={type}
               label={label}
               rules={rules}
+              maskConfig={maskConfig}
             />
           );
         })}
