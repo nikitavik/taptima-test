@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import profile from '/public/images/profile.png';
+import profile2x from '/public/images/profile2x.png';
 import { ButtonColors } from '../../../../../enums/styledComponents';
 import { CardAreas } from '../../../../../enums/cardAreas';
 import Card from '../../../common/block/Card';
@@ -38,7 +39,7 @@ const ProfileCard: FC = () => {
           </CardSubtitle>
         </TextWrapper>
         <ImageWrapper>
-          <Image src={profile.src} alt="Profile image" />
+          <Image src={profile.src} alt="Profile image" srcSet={`${profile2x.src} 2x`} />
         </ImageWrapper>
       </StyledProfileCard>
     </Card>
