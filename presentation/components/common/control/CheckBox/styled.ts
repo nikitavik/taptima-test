@@ -15,8 +15,15 @@ export const HiddenInput = styled.input`
   ${hideVisually()}
 
   &:checked + div {
+    color: ${({ theme }) => theme.colors.darkenBlue};
     background-image: url(${checkbox.src});
     border: none;
+  }
+  &:hover:not(:checked) + div {
+    border: 2px solid ${({ theme }) => theme.colors.blackFont};
+  }
+  &:hover:not(:checked) ~ div {
+    color: ${({ theme }) => theme.colors.blackFont};
   }
   &:disabled + div {
     border: 2px solid ${({ theme }) => theme.colors.gray33};
@@ -30,10 +37,11 @@ export const HiddenInput = styled.input`
 export const Box = styled.div`
   width: 1.125rem;
   height: 1.125rem;
-  min-width: 1.125rem;
-  min-height: 1.125rem;
+  min-width: 18px;
+  min-height: 18px;
   border: 2px solid ${({ theme }) => theme.colors.secondaryBlue};
   border-radius: 4px;
+  transition: all 0.25s ease;
 `;
 
 export const CheckBoxText = styled.div`
