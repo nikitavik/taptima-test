@@ -13,13 +13,7 @@ const IconButton: FC<PropsT> = (props) => {
   const { src, onClick, color, size } = props;
   return (
     <StyledIconButton onClick={onClick} size={`${size}px`} color={color}>
-      <ReactSVG
-        src={src}
-        beforeInjection={(svg) => {
-          svg.setAttribute('style', `width: ${size}px`);
-          svg.setAttribute('style', `height: ${size}px`);
-        }}
-      />
+      <ReactSVG src={src} />
     </StyledIconButton>
   );
 };

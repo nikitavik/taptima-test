@@ -5,13 +5,14 @@ export const StyledIconButton = styled.figure<{ size: number | string; color: st
   justify-content: center;
   align-items: center;
   margin-left: 16px;
-  max-width: ${({ size }) => size};
+  width: ${({ size }) => size};
   min-width: ${({ size }) => size};
-  max-height: ${({ size }) => size};
-  fill: ${({ color }) => color};
+  height: ${({ size }) => size};
+  min-height: ${({ size }) => size};
   cursor: pointer;
-  & * {
-    max-width: ${({ size }) => size};
-    max-height: ${({ size }) => size};
+  & svg {
+    fill: ${({ color }) => color};
+    width: 100%;
+    height: 100%;
   }
 `;

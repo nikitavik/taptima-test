@@ -9,13 +9,7 @@ const Logo: FC = () => {
     <Link href="/" passHref>
       <StyledLogo>
         <ImageWrapper>
-          <ReactSVG
-            src={logo.src}
-            beforeInjection={(svg) => {
-              svg.setAttribute('style', 'width: 36px');
-              svg.setAttribute('style', 'height: 36px');
-            }}
-          />
+          <ReactSVG src={logo.src} />
         </ImageWrapper>
         <LogoText>Devias Kit</LogoText>
       </StyledLogo>
