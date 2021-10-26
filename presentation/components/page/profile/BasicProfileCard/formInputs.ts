@@ -8,7 +8,7 @@ export type MaskConfigT = {
   alwaysShowMask?: boolean;
 };
 
-export type BasicFormInputs = {
+export type BasicFormInputsT = {
   firstName: string;
   lastName: string;
   email: string;
@@ -18,7 +18,7 @@ export type BasicFormInputs = {
 };
 
 export const FORM_INPUTS: Array<
-  UseControllerProps<BasicFormInputs> &
+  UseControllerProps<BasicFormInputsT> &
     InputHTMLAttributes<HTMLInputElement> & {
       label: string;
       maskConfig?: MaskConfigT;

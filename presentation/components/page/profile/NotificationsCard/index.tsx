@@ -11,6 +11,7 @@ import { Fieldset, SetTitle, StyledForm } from './styled';
 import { useFormStatus } from '../../../../../hooks/formStatus.hook';
 import { mockRequest } from '../../../../../data/mockRequest';
 import FormStatusMessage from '../FormStatusMessage';
+import { ProfilePageForms } from '../../../../../enums/forms';
 
 type FormDefaultT = {
   notifications: CheckBoxGroupT;
@@ -65,14 +66,18 @@ const NotificationsCard: FC = () => {
       }
       footer={
         <CardFooter>
-          <PrimaryButton type="submit" color={ButtonColors.secondary} form="Notifications">
+          <PrimaryButton
+            type="submit"
+            color={ButtonColors.secondary}
+            form={ProfilePageForms.notificationsForm}
+          >
             Save
           </PrimaryButton>
           <FormStatusMessage isSuccessful={formState.isSubmitSuccessful} isShown={isShown} />
         </CardFooter>
       }
     >
-      <StyledForm id="Notifications" onSubmit={handleSubmit(onSubmit)}>
+      <StyledForm onSubmit={handleSubmit(onSubmit)} id={ProfilePageForms.notificationsForm}>
         <Fieldset>
           <SetTitle>Notifications</SetTitle>
           {CHECKBOXES.notifications.choice.map((j, i) => {

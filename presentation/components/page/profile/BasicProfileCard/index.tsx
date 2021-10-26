@@ -8,9 +8,10 @@ import PrimaryButton from '../../../common/control/PrimaryButton';
 import TextInput from '../../../common/control/TextInput';
 import FormStatusMessage from '../FormStatusMessage';
 import { CardFooter, CardHeader, HeaderSubTitle, HeaderTitle } from '../styled';
-import { BasicFormInputs, FORM_INPUTS } from './formInputs';
+import { BasicFormInputsT, FORM_INPUTS } from './formInputs';
 import { StyledForm } from './styled';
 import { mockRequest } from '../../../../../data/mockRequest';
+import { ProfilePageForms } from '../../../../../enums/forms';
 
 const defaultValues = {
   firstName: '',
@@ -22,13 +23,13 @@ const defaultValues = {
 };
 
 const BasicProfileCard: FC = () => {
-  const { handleSubmit, control, reset, formState } = useForm<BasicFormInputs>({
+  const { handleSubmit, control, reset, formState } = useForm<BasicFormInputsT>({
     mode: 'onBlur',
     defaultValues,
   });
   const { isShown, showFormStatus } = useFormStatus();
 
-  const onSubmit = async (data: BasicFormInputs) => {
+  const onSubmit = async (data: BasicFormInputsT) => {
     try {
       await mockRequest(data);
       reset(defaultValues);
@@ -53,7 +54,7 @@ const BasicProfileCard: FC = () => {
           <PrimaryButton
             color={ButtonColors.primary}
             type="submit"
-            form="BasicForm"
+            form={ProfilePageForms.basicProfileForm}
             disabled={
               !formState.isDirty ||
               !formState.isValid ||
@@ -67,7 +68,7 @@ const BasicProfileCard: FC = () => {
         </CardFooter>
       }
     >
-      <StyledForm onSubmit={handleSubmit(onSubmit)} id="BasicForm">
+      <StyledForm onSubmit={handleSubmit(onSubmit)} id={ProfilePageForms.basicProfileForm}>
         {FORM_INPUTS.map((input) => {
           const { name, type, label, rules, maskConfig } = input;
           return (
