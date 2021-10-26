@@ -12,7 +12,6 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0;
     font-size: 14px;
     color: #3A3B3F;
-    overflow-y: auto;
     ${mq.xs} {
         font-size: 12px;
     }
