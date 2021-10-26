@@ -23,8 +23,7 @@ const defaultValues = {
 
 const BasicProfileCard: FC = () => {
   const { handleSubmit, control, reset, formState } = useForm<BasicFormInputs>({
-    mode: 'onTouched',
-    reValidateMode: 'onBlur',
+    mode: 'onBlur',
     defaultValues,
   });
   const { isShown, showFormStatus } = useFormStatus();
