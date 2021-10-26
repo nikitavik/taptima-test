@@ -14,7 +14,7 @@ export const StyledSidebar = styled.aside<{ isOpen: boolean }>`
   max-width: ${({ theme }) => theme.sizes.sidebarWidth};
   overflow-y: hidden;
   grid-area: sidebar;
-  transition: all 0.2s ease-in;
+  transition: transform 0.25s ease;
   ${mq.xs} {
     position: fixed;
     width: 100%;
@@ -22,7 +22,7 @@ export const StyledSidebar = styled.aside<{ isOpen: boolean }>`
     top: 0;
     bottom: 0;
     left: 0;
-    display: ${({ isOpen }) => (isOpen ? 'block' : `none`)};
+    transform: translateX(${({ isOpen }) => (isOpen ? '0' : '-100%')});
     z-index: 1000;
   }
 `;
