@@ -35,4 +35,8 @@ export const BurgerWrapper = styled.div`
     stroke: #fff;
     cursor: pointer;
   }
+  & svg {
+    width: 100%;
+    height: 100%;
+  }
 `;

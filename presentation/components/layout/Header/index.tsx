@@ -17,13 +17,7 @@ const Header: FC<PropsT> = (props) => {
   return (
     <StyledHeader>
       <BurgerWrapper onClick={onToggleSidebar}>
-        <ReactSVG
-          src={burger.src}
-          beforeInjection={(svg) => {
-            svg.setAttribute('style', 'width: 36px');
-            svg.setAttribute('style', 'height: 36px');
-          }}
-        />
+        <ReactSVG src={burger.src} />
       </BurgerWrapper>
       <Logo />
       <Alert />
