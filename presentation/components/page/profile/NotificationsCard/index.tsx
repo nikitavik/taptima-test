@@ -85,7 +85,7 @@ const NotificationsCard: FC = () => {
               <CheckBox
                 key={CheckBoxGroups.notifications + j.name}
                 control={control}
-                name={`${CheckBoxGroups.notifications}[choice][${i}][checked]`}
+                name={`[${CheckBoxGroups.notifications}][choice][${i}][checked]`}
                 text={j.name}
                 subtext={j.subtext}
               />
@@ -99,7 +99,7 @@ const NotificationsCard: FC = () => {
               <CheckBox
                 key={CheckBoxGroups.messages + j.name}
                 control={control}
-                name={`${CheckBoxGroups.messages}[choice][${i}][checked]`}
+                name={`[${CheckBoxGroups.messages}][choice][${i}][checked]`}
                 text={j.name}
                 subtext={j.subtext}
               />
