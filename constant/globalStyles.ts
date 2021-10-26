@@ -10,10 +10,13 @@ export const GlobalStyles = createGlobalStyle`
   html, body {
     padding: 0;
     margin: 0;
-    font-size: 14px;
+    font-size: 15px;
     color: #3A3B3F;
     ${mq.xs} {
-        font-size: 12px;
+        font-size: 14px;
+    }
+    ${mq.lg} {
+        font-size: 16px;
     }
     ${PROJECT_FONT};
   }
