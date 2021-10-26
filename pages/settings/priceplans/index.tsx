@@ -4,7 +4,7 @@ import NavBar from '../../../presentation/components/page/settings/NavBar';
 
 const PricePlans: FC = () => {
   return (
-    <MainLayout>
+    <MainLayout title="Price Plans">
       <NavBar />
       Price Plans Page
     </MainLayout>

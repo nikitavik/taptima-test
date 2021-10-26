@@ -8,7 +8,7 @@ import { PageLayout } from '../../../presentation/components/page/profile/styled
 
 const Profile: FC = () => {
   return (
-    <MainLayout>
+    <MainLayout title="Profile">
       <NavBar />
       <PageLayout>
         <ProfileCard />

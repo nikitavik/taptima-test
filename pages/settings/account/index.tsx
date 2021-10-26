@@ -4,7 +4,7 @@ import NavBar from '../../../presentation/components/page/settings/NavBar';
 
 const Account: FC = () => {
   return (
-    <MainLayout>
+    <MainLayout title="Account">
       <NavBar />
       Account Page
     </MainLayout>
